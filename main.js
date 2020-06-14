@@ -4,10 +4,14 @@ require("dotenv").config();
 
 function createWindow() {
   const window = new BrowserWindow({
-    width: process.env.WINDOW_WIDTH || 800,
-    height: process.env.WINDOW_WIDTH || 800,
+    width: parseInt(process.env.WINDOW_WIDTH),
+    height: parseInt(process.env.WINDOW_HEIGHT),
+    alwaysOnTop: true,
+    frame: false,
+    transparent: true,
     webPreferences: {
       nodeIntegration: true,
+      devTools: false,
     },
   });
 
