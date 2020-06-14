@@ -11,7 +11,7 @@ function createWindow() {
     transparent: true,
     webPreferences: {
       nodeIntegration: true,
-      devTools: false,
+      devTools: true,
     },
   });
 
